@@ -1,0 +1,30 @@
+metadata:
+  version: 1
+sources: 
+  # processed data - intermediate 
+  mills_official:
+    driver: csv 
+    description: list of offical mills act agencies, result of controller parse.csv 
+    args:
+      urlpath: "./intermediate/mills_official.csv"
+  gsheet_trillium_list: 
+    driver: csv
+    description: list from the trillium master and filtered. download using the bash script. 
+    args:
+      urlpath: "./intermediate/offical_list_from_gsheet.csv"
+  ctsa_list: 
+    driver: csv
+    description: the CTSA list of paratransit agencies, processed from the wedny king email. 
+    args:
+      urlpath: "./intermediate/processes_ctsa.csv"
+  # crosswalks from google sheets 
+  ctsa_mills_crosswalk: 
+    driver: csv
+    description: a manually created crosswalk between CTSA and Mills Official 
+    args:
+      urlpath: https://docs.google.com/spreadsheets/d/1inAKMhCkd4mtRcY1urM36IfLDzkyPRM1D3OJ_ftSXaw/gviz/tq?tqx=out:csv&sheet=ctsa_mills_crosswalk
+  trillium_mills_crosswalk: 
+    driver: csv
+    description: a manually created crosswalk between CTSA and Mills Official 
+    args:
+      urlpath: https://docs.google.com/spreadsheets/d/1inAKMhCkd4mtRcY1urM36IfLDzkyPRM1D3OJ_ftSXaw/gviz/tq?tqx=out:csv&sheet=trillium_mills_crosswalk
