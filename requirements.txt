@@ -1,3 +1,5 @@
 pandas
 aiohttp
 intake
+xlrd
+papermill
