@@ -14,7 +14,7 @@ sources:
       urlpath: "./intermediate/offical_list_from_gsheet.csv"
   ctsa_list: 
     driver: csv
-    description: the CTSA list of paratransit agencies, processed from the wedny king email. 
+    description: the CTSA list of paratransit agencies, processed from the wedny king email email to Hunter, Gillian on 12-2-2020.
     args:
       urlpath: "./intermediate/processes_ctsa.csv"
   # crosswalks from google sheets 
