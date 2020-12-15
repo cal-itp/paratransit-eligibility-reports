@@ -1,5 +1,5 @@
 # paratransit-eligibility-reports
-worked related to the paratransit eligibility reports. 
+work related to the paratransit eligibility reports. 
 
 Currently, this repo is used to generate a centralized list of paratransit agencies as part of the requirements of [AB 1351](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB1351)
 
