@@ -9,8 +9,9 @@ The current data sources are
 1) Blackcat 
 1) [State Controller's Audit Report Raw Data](https://bythenumbers.sco.ca.gov/Raw-Data/Transit-Operators-Raw-Data-for-Fiscal-Years-2017-2/6dj3-r4jw)
 1) CTSA List
-1) Trillium Maintained List of Transit Agencies in CA
+1) [Trillium Maintained List of Transit Agencies in CA]
 
+Various Datasets are cataloged in `./catalog.yml`, an [intake](https://github.com/intake/intake) data catalog file. 
 
 ## Methodology 
 To determine which paratransit agencies are getting Mills-Alquish-Deddeh Act (aka TDA) funding, they should be in the State Controller dataset. We then filter that dataset to only agencies that are claiming  and/or is claiming paratransit vehicles. This is both the starting point for the list and the produce of the `is_mills` variable in the final dataset. 
@@ -24,4 +25,7 @@ Theoretically, the BlackCat entries for 5310 funding should all have correspondi
 Once that is done, we manually created a [set of crosswalks](https://docs.google.com/spreadsheets/d/1inAKMhCkd4mtRcY1urM36IfLDzkyPRM1D3OJ_ftSXaw/edit#gid=0) between the  controller filtered list and both the Trillium and CTSA list. The datasets are merged, joined and deduped in `dedupe.ipynb` and we write out the final dataset in `final/final_combined_paratransit.csv`
 
 ## Running the script 
-To run all the scripts to combine the data, run `make data`
+To run all the scripts to combine the data, run `make data`. To update the dataset, you may have to update the list of crosswalks [set of crosswalks](https://docs.google.com/spreadsheets/d/1inAKMhCkd4mtRcY1urM36IfLDzkyPRM1D3OJ_ftSXaw/edit#gid=0) if new agencies are present in either the CTSA or Trillium lists. 
+
+## Dependencies
+To install the required python packages, run `make install`.

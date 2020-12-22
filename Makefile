@@ -7,3 +7,7 @@ data: download
 
 download:
 	bash download-official-gsheet.sh
+
+install:
+    conda install -c conda-forge pandas intake aiohttp xlrd papermill
+    pip install -r requirements.txt 
