@@ -28,3 +28,9 @@ sources:
     description: a manually created crosswalk between CTSA and Mills Official 
     args:
       urlpath: https://docs.google.com/spreadsheets/d/1inAKMhCkd4mtRcY1urM36IfLDzkyPRM1D3OJ_ftSXaw/gviz/tq?tqx=out:csv&sheet=trillium_mills_crosswalk
+  # assesment done by oliva 
+  assessment_sheet: 
+    driver: csv
+    description: "Oliva's Assessment, completed in febuary, of all the agencies found in the final version (see `dedupe.ipynb`)"
+    args:
+      urlpath: './data/assessment.csv'
